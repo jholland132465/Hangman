@@ -1,43 +1,3 @@
-// var theGame = {
-
-// 		myNumber: Math.floor(Math.random()*10),
-// 		timesWon: 0,
-// 		timesGuessed: 0,
-// 		timesLost: 0,
-// 		userGuess: 0,
-
-
-// 	resetGuesses: function() {
-// 		this.timesGuessed = this.timesGuessed*0;
-// 	},
-// 	addOneWin: function() {
-
-// 		this.timesWon = this.timesWon+1;
-
-
-// 	},
-
-// 	addOneLoss: function() {
-// 		this.timesLost = this.timesLost+1;
-// 	},
-
-// 	addGuess: function() {
-// 		this.timesGuessed = this.timesGuessed+1;
-// 	},
-
-// 	showLog: function() {
-// 		console.log(this.myNumber);
-// 	},
-
-// 	compare: function(a, b) {
-// 		if (a === b) {
-	
-// 		alert("Done it.")
-// 		}
-// 	}
-
-		
-// 	};
 var gameLog = {
 
 myNumber : Math.floor(Math.random()*10),
@@ -55,8 +15,8 @@ document.onkeyup = function(event) {
 
 	if (userGuess == gameLog.myNumber) {
 		gameLog.timesWon++;
-		gameLog.timesGuessed = 5;
-		alert("Ok, that was spooky")
+		gameLog.timesGuessed = 7;
+		alert("You guessed correct.")
 	}
 
 	else {
@@ -68,8 +28,9 @@ document.onkeyup = function(event) {
 		gameLog.timesLost++;
 		gameLog.timesGuessed = 5;
 		gameLog.userGuessTally = [];
-		alert("Well, maybe not so psychic afterall...");
+		alert("You lost.");
 	}
+
 
 	document.getElementById("wins").innerHTML = gameLog.timesWon;
 	document.getElementById("losses").innerHTML = gameLog.timesLost;
